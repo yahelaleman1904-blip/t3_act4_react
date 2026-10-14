@@ -1,33 +1,44 @@
 Act4. Introducción a React - Fundamentos y Primer Componente
 
-Descripción del Proyecto
+Mini aplicación desarrollada con React y Vite que incluye un contador interactivo y un gestor de tareas. El proyecto demuestra el uso de componentes funcionales, props, manejo de estado (useState) y renderizado de listas.
 
-Esta es una aplicación web práctica desarrollada con React y construida mediante Vite. El proyecto consta de una interfaz interactiva que integra dos funcionalidades principales:
-
-Contador Interactivo: Un componente que gestiona su propio estado para llevar la cuenta de clics, incorporando animaciones dinámicas gestionadas a través del ciclo de vida del componente.
-
-Gestor de Tareas: Una lista de elementos renderizada dinámicamente a partir de un arreglo, donde cada tarea es procesada por un componente hijo independiente que recibe propiedades (props) y permite alterar el estado de completado de cada elemento.
-
-El objetivo principal es demostrar la comprensión práctica de los fundamentos de React: componentes funcionales, inmutabilidad de props, manejo de estado interno (useState) y renderizado iterativo de listas en el Virtual DOM.
-
-Cuestionario y Respuestas
+Respuestas al Cuestionario
 
 a) ¿Qué diferencia hay entre props y state en React?
-La principal diferencia radica en su origen y mutabilidad:
 
-Props (Propiedades): Son datos externos que se pasan de un componente padre a un componente hijo. Son de solo lectura (inmutables), lo que significa que el componente que las recibe no puede modificarlas directamente.
+Las props (propiedades) son datos externos que se pasan de un componente padre a un componente hijo. Son de solo lectura (inmutables para el componente que las recibe).
 
-State (Estado): Son datos internos y privados controlados exclusivamente por el componente donde fueron declarados. El estado es mutable; cuando se actualiza, React reacciona automáticamente volviendo a renderizar el componente y sus hijos para reflejar los cambios en la interfaz.
+El state (estado) es un conjunto de datos interno y privado controlado por el propio componente. Es mutable y, cuando cambia, React vuelve a renderizar el componente para reflejar la actualización en pantalla.
 
 b) ¿Por qué es importante usar una key al renderizar una lista de elementos?
-La propiedad key es fundamental para el algoritmo de reconciliación de React (Virtual DOM). Al asignar un identificador único a cada elemento de una lista, React puede rastrear de forma exacta qué elementos específicos han sido modificados, añadidos o eliminados. Esto evita que React tenga que reconstruir toda la lista desde cero, optimizando drásticamente el rendimiento y previniendo errores visuales en el estado de los componentes (como inputs que pierden el foco o datos que se cruzan).
+
+La propiedad key ayuda a React a identificar de forma única qué elementos de una lista han cambiado, se han agregado o se han eliminado.
+
+Esto optimiza el rendimiento del Virtual DOM, ya que React no necesita volver a dibujar toda la lista, sino únicamente los elementos específicos que sufrieron modificaciones.
 
 c) Explica con tus propias palabras qué hace la función useState y da un ejemplo de dónde la usaste en tu mini aplicación.
-La función useState es un Hook de React que nos permite agregar variables reactivas a un componente funcional. Al invocarlo, nos devuelve un arreglo con dos elementos: el valor actual del estado y una función dedicada para actualizar dicho valor.
-En mi aplicación, utilicé useState en múltiples lugares, por ejemplo, para llevar el control del contador. Inicialicé const [counter, setCounter] = useState(0);, y cada vez que el usuario hace clic en el botón, mando a llamar a setCounter(counter + 1). Esta acción incrementa el número y le avisa a React que debe redibujar esa parte de la pantalla con el nuevo valor.
+
+useState es un Hook que nos permite agregar memoria a un componente. Nos devuelve un arreglo con dos valores: el estado actual y una función para actualizar ese estado.
+
+En la aplicación lo utilicé para manejar el counter (el contador numérico), para el arreglo de tasks (las tareas) y para controlar la animación del botón.
+
+Ejemplo de uso en el código:
+
+// Definición del estado para el contador
+const [counter, setCounter] = useState(0);
+
+// Función que actualiza el estado al hacer clic
+const handleIncrement = () => {
+  setCounter(counter + 1);
+};
+
+
+Al ejecutar setCounter(counter + 1), React detecta el cambio de estado y actualiza el valor numérico en la pantalla.
 
 d) Enlace del repositorio de GitHub
-Repositorio en GitHub - t3_act4_react
 
-e) Enlace del proyecto ya desplegado en GitHub Pages
-Despliegue en GitHub Pages
+Repositorio t3_act4_react
+
+e) Enlace del proyecto desplegado en GitHub Pages
+
+Proyecto Desplegado - Actividad 4
