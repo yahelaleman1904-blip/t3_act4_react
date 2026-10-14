@@ -46,7 +46,7 @@ Al ejecutar `setCounter(counter + 1)`, React detecta el cambio de estado y actua
 
 ### d) Enlace del repositorio de GitHub
 
-[Repositorio t3_act4_react](https://github.com/yahelaleman1904/t3_act4_react)
+[Repositorio t3_act4_react](https://yahelaleman1904-blip.github.io/t3_act4_react/)
 
 ---
 
