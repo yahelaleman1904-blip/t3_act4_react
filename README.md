@@ -52,4 +52,4 @@ Al ejecutar `setCounter(counter + 1)`, React detecta el cambio de estado y actua
 
 ### e) Enlace del proyecto desplegado en GitHub Pages
 
-[Proyecto Desplegado - Actividad 4](https://yahelaleman1904.github.io/t3_act4_react/)
+[Proyecto Desplegado - Actividad 4](https://yahelaleman1904-blip.github.io/t3_act4_react/)
